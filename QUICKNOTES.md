@@ -23,6 +23,8 @@
   clear
   ```
 
+- *quicknote:* int \*locs = (int*) malloc(N_DUMMIES * sizeof(int)) correct way to initialize the a locs, because its shared between function (out of scope)
+
 **bugs**
 
 ***Very weird error. I have no glue^***
