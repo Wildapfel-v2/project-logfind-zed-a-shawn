@@ -10,6 +10,7 @@ void Prototype_read_files_from_logfind(const char *logfind_path){
 
     FILE *file_ptr;
     char *files[N_DUMMIES];
+    char read_buf[READ_BUF_SIZE];
     
     for (int i = 0; i < N_DUMMIES; i++){
         files[i] = malloc(sizeof(char) * READ_BUF_SIZE);
@@ -21,7 +22,6 @@ void Prototype_read_files_from_logfind(const char *logfind_path){
         }
         // check(file_ptr, "i dont know");
         
-    char read_buf[READ_BUF_SIZE];
     
     // file_ptr = fopen(logfind_path, "r");
     // check(file_ptr, "hello world");
