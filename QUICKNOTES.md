@@ -1,3 +1,5 @@
+## Comments
+
 **dev/01-glob-sandbox**
 
 - I started evaluating how `glob` works only using the manual and trying out
@@ -25,9 +27,9 @@
 
 - *quicknote:* int \*locs = (int*) malloc(N_DUMMIES * sizeof(int)) correct way to initialize the a locs, because its shared between function (out of scope)
 
-**bugs**
+## Bugs
 
-***Very weird error. I have no glue^***
+***Very weird error. I have no glue yet***
 
 - ```bash
   /var/home/max-inspiron/Workbench/learn-c-the-hard-way-revisited/v2/exercises/part04-projects/ex26-project-logfind/dev/02-prototype-without-glob-functionality/dbg.h:29:41: error: jump into scope of identifier with variably modified type  
