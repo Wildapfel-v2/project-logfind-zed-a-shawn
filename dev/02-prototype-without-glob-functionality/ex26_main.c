@@ -31,7 +31,7 @@ int *Prototype_find_byte_locations_of_newline_chars(const char *logfind_path){
     }
 
     return locs;
-
+    
     error:
     exit(1);
 }
