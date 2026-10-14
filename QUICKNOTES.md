@@ -18,6 +18,21 @@
 
   - or a nul pointer
 
+**dev/01-testing-functionality/nextline**
+
+- the `FILE *` struct has read pointer which I should manipulate/use
+
+- dont touch the opaque from developer (what ever underscore \_\_function) 
+
+  - ```c
+    // I tried: 
+    *fp->_IO_read_ptr = *test;
+    ```
+
+- Solutions
+
+  - **`fgetpos` / `fsetpos`** — save/restore the position using an opaque `fpos_t` token. Portable, and the library handles all internal buffer bookkeeping for you.
+
 **dev/02-prototype-without-glob-functionality**
 
 - Zed suggest to start first without the glob functionality, thats why i build some dummy-data and will first develop a simpler program
