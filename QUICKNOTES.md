@@ -1,12 +1,22 @@
 ## Comments
 
-**dev/01-glob-sandbox**
+**dev/01-testing-functionality/glob**
 
 - I started evaluating how `glob` works only using the manual and trying out
 
 - I find it works similiar to `ls`
 
 - I noticed that why C ecosystem is so awesome... everthing is documented and accessible via `man` :D
+
+**dev/01-testing-functionality/pattern**
+
+- Either I need to implement myself, but i found the `strstr` fucntion in `<string.h>` which seems to do the exact behaviour I want
+
+- I evaluated, `strstr` returns the first occurence, let me validate if this just the pointer postion accroding to the location in the text (or haystack xD)
+
+  - its either a pointer to the position of the first occurence
+
+  - or a nul pointer
 
 **dev/02-prototype-without-glob-functionality**
 
