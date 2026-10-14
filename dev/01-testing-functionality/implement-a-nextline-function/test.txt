@@ -1,0 +1,4 @@
+hello world
+this is for mimicing the behaviour of a linewise reading
+written in 100% C
+Especially, I want to test the EOF behaviour
