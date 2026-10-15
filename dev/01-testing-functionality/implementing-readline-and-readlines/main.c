@@ -20,7 +20,6 @@ int get_n_lines(FILE *fp){
     return counter + 1; // for the EOF, doesnt need to have a \n symbol 
 }
 
-
 char **readlines(FILE *fp){
 
     int n_lines = get_n_lines(fp);
@@ -37,7 +36,6 @@ char **readlines(FILE *fp){
     return lines;
 
 }
-
 
 char *readline(FILE *fp){
 
