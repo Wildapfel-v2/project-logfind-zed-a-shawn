@@ -17,6 +17,7 @@ int main(int argc, char *argv[]){
     log_info("%s", lines[1]);
     log_info("%s", lines[2]);
     log_info("%s", lines[3]);
+    
 
     return 0;
 }
