@@ -28,7 +28,7 @@ char **readlines(FILE *fp){
         if (line == NULL) break;
     }
 
-    rewind(fp);         // same here ... 
+    rewind(fp);         // same here ...  
     return lines;
 
 }
