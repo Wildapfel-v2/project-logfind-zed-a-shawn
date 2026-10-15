@@ -7,6 +7,8 @@ char **readlines(FILE *fp);
 
 char *readline(FILE *fp);
 
-int pattern_exists(char *text, int n_patterns, char *patterns[]);
+int patterns_exists(char *text, int n_patterns, char *patterns[], char *mode);
+
+int evalute(int *bools, int n_bools, char *mode);
 
 #endif

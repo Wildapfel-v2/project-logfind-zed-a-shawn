@@ -45,6 +45,8 @@ char *readline(FILE *fp){
 
     while (c != EOF){
         c = fgetc(fp);
+        // int eof_bool = feof(fp);
+        // log_info("%d", eof_bool);ss
 
         if (c == '\n'){
             break;
@@ -60,23 +62,41 @@ char *readline(FILE *fp){
     fread(str_buf, sizeof(char) * counter, 1, fp);
     str_buf[counter] = '\0';
     fsetpos(fp, &pos_end);
-    
     return str_buf;
 
 }
 
-int pattern_exists(char *text, int n_patterns, char *patterns[]){
+int evalute(int *bools, int n_bools, char *mode){
+    // since he didnt introduce any fancy math/logic library, 
+    // I will just evalute with a loop
+
+    int c = 0;
+    for (int i = 0; i < n_bools; i++){
+        c += bools[i];
+    }
+
+    if (!strcmp(mode, "and")) return (c == n_bools) ? 1 : 0;
+    if (!strcmp(mode, "or")) return (c >= 1) ? 1 : 0;
+
+    // log_info("Wrong mode: and | or only. ");
+    printf("Wrong mode: and | or only. ");
+    exit(1);
+
+}
+
+int patterns_exists(char *text, int n_patterns, char *patterns[], char *mode){
+
+    if (text == NULL) return -1;
+
+    int matched[n_patterns];
 
     for (int i = 0; i < n_patterns; i++){
         char *pos = strstr(text, patterns[i]);
-        log_info("%p", pos);
-        // log_info("%s", patterns[i]);
+        if (pos != NULL){ // pattern exists
+            matched[i] = 1;
+        }
+        // else leave the default zeros
     }
 
-
-    // int n_patterns = sizeof(patterns) / sizeof(char)
-    // strstr(text, )
-
-
-    return -1;
+    return evalute(matched, n_patterns, mode);
 }
