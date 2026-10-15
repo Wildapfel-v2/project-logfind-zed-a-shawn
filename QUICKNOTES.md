@@ -68,7 +68,13 @@
 - make an alias
 
 - ```bash
-  alias cr="gcc -c string_utils.c -o string_utils.o && gcc string_utils.o main.c -o main && ./main"
+  alias cr="gcc -c string_utils.c -o string_utils.o && gcc string_utils.o main.c -o main && ./main "
+  ```
+
+- make an alias for testing patterns args via commandline
+
+- ```bash
+  alias crpattern="gcc -c string_utils.c -o string_utils.o && gcc string_utils.o main.c -o main && ./main hose test dev quantum"
   ```
 
 ## Bugs
