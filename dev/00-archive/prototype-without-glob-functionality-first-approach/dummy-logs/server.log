@@ -1,0 +1,10 @@
+2026-01-15 09:55:00 INFO  server boot
+2026-01-15 09:55:01 INFO  listening on 0.0.0.0:443
+2026-01-15 09:55:02 WARN  tls certificate expires soon
+2026-01-15 09:56:11 INFO  client connected
+2026-01-15 09:56:12 ERROR handshake failed: bad record mac
+2026-01-15 09:56:13 INFO  client disconnected
+2026-01-15 09:57:00 INFO  client connected
+2026-01-15 09:57:01 INFO  handshake ok
+2026-01-15 09:58:44 WARN  slow response: 1.2s
+2026-01-15 09:59:00 INFO  shutdown requested
