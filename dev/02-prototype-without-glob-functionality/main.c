@@ -6,18 +6,20 @@ const char *DUMMY_LOGFIND_PATH = "/var/home/max-inspiron/Workbench/learn-c-the-h
 
 int main(int argc, char *argv[]){
 
-    log_info("hello world");
-    
+
     FILE *fp;
     fp = fopen(DUMMY_LOGFIND_PATH, "r");
     char **lines = readlines(fp);
     int n_lines = get_n_lines(fp);
-    log_info("%d", n_lines);
-    log_info("%s", lines[0]);
-    log_info("%s", lines[1]);
-    log_info("%s", lines[2]);
-    log_info("%s", lines[3]);
-    
+    for (int i = 0; i < n_lines; i++){
+
+        FILE *fp_logfind_content;
+        fp_logfind_content = fopen(lines[i], "r");
+        char **log_lines = readlines(fp_logfind_content);
+        log_info("%s", log_lines[0]);
+
+    }
+
 
     return 0;
 }
