@@ -7,4 +7,6 @@ char **readlines(FILE *fp);
 
 char *readline(FILE *fp);
 
+int pattern_exists(char *text, int n_patterns, char *patterns[]);
+
 #endif

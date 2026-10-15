@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "string_utils.h"
+#include "dbg.h"
 
 int get_n_lines(FILE *fp){
     char c;
@@ -61,4 +63,20 @@ char *readline(FILE *fp){
     
     return str_buf;
 
+}
+
+int pattern_exists(char *text, int n_patterns, char *patterns[]){
+
+    for (int i = 0; i < n_patterns; i++){
+        char *pos = strstr(text, patterns[i]);
+        log_info("%p", pos);
+        // log_info("%s", patterns[i]);
+    }
+
+
+    // int n_patterns = sizeof(patterns) / sizeof(char)
+    // strstr(text, )
+
+
+    return -1;
 }
