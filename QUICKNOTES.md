@@ -65,6 +65,12 @@
   gcc string_utils.o main.c -o main          # actual program
   ```
 
+- make an alias
+
+- ```bash
+  alias cr="gcc -c string_utils.c -o string_utils.o && gcc string_utils.o main.c -o main && ./main"
+  ```
+
 ## Bugs
 
 ***Very weird error. I have no glue yet***
