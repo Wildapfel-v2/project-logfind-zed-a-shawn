@@ -11,7 +11,7 @@ int get_n_lines(FILE *fp){
             counter++;
         }
     }
-    rewind(fp);         // important !!    
+    rewind(fp);         // important, otherwise end of the file and you can reach any information aynmore
     return counter + 1; // for the EOF, doesnt need to have a \n symbol 
 }
 
@@ -28,6 +28,7 @@ char **readlines(FILE *fp){
         if (line == NULL) break;
     }
 
+    rewind(fp);         // same here ... 
     return lines;
 
 }
