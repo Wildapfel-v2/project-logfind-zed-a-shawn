@@ -43,18 +43,15 @@ char *readline(FILE *fp){
     fpos_t pos_end;
     int rc = fgetpos(fp, &pos_start);
 
-    while (c != EOF){
+    while (!feof(fp)){
         c = fgetc(fp);
-        // int eof_bool = feof(fp);
-        // log_info("%d", eof_bool);ss
-
         if (c == '\n'){
             break;
         }
         counter++;
     }
-
-    if (counter == 0) return NULL;
+    // using 1 here stops the endless reading i wasn encountering
+    if (counter == 1) return NULL; 
 
     rc = fgetpos(fp, &pos_end);
     fsetpos(fp, &pos_start);
@@ -62,6 +59,7 @@ char *readline(FILE *fp){
     fread(str_buf, sizeof(char) * counter, 1, fp);
     str_buf[counter] = '\0';
     fsetpos(fp, &pos_end);
+    
     return str_buf;
 
 }
