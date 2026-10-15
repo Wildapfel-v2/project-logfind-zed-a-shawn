@@ -1,5 +1,26 @@
 ## Comments
 
+**dev/00-archive/prototype-without-glob-functionality-first-apporach**
+
+- Zed suggest to start first without the glob functionality, thats why i build some dummy-data and will first develop a simpler program
+
+- *use this alias for faster compile and run:*
+
+- ```bash
+  alias cr="make /var/home/max-inspiron/Workbench/learn-c-the-hard-way-revisited/v2/exercises/part04-projects/ex26-project-logfind/dev/02-prototype-without-glob-functionality/ex26_main && /var/home/max-inspiron/Workbench/learn-c-the-hard-way-revisited/v2/exercises/part04-projects/ex26-project-logfind/dev/02-prototype-without-glob-functionality/ex26_main"
+  ```
+
+- *maybe use this to quicker open in konsole*
+
+- ```bash
+  cd Workbench/learn-c-the-hard-way-revisited/v2/exercises/part04-projects/ex26-project-logfind/
+  clear
+  ```
+
+- *quicknote:* int \*locs = (int*) malloc(N_DUMMIES * sizeof(int)) correct way to initialize the a locs, because its shared between function (out of scope)
+
+- I moved this to archive (previously first apporach to Prototypeing)
+
 **dev/01-testing-functionality/glob**
 
 - I started evaluating how `glob` works only using the manual and trying out
@@ -35,22 +56,14 @@
 
 **dev/02-prototype-without-glob-functionality**
 
-- Zed suggest to start first without the glob functionality, thats why i build some dummy-data and will first develop a simpler program
+- This should turn into the actual protoype, I will build the program using the `readline/readlines` and the `strstr`
 
-- *use this alias for faster compile and run:*
-
-- ```bash
-  alias cr="make /var/home/max-inspiron/Workbench/learn-c-the-hard-way-revisited/v2/exercises/part04-projects/ex26-project-logfind/dev/02-prototype-without-glob-functionality/ex26_main && /var/home/max-inspiron/Workbench/learn-c-the-hard-way-revisited/v2/exercises/part04-projects/ex26-project-logfind/dev/02-prototype-without-glob-functionality/ex26_main"
-  ```
-
-- *maybe use this to quicker open in konsole*
+- *Compile*
 
 - ```bash
-  cd Workbench/learn-c-the-hard-way-revisited/v2/exercises/part04-projects/ex26-project-logfind/
-  clear
+  gcc -c string_utils.c -o string_utils.o    # intermediate object
+  gcc string_utils.o main.c -o main          # actual program
   ```
-
-- *quicknote:* int \*locs = (int*) malloc(N_DUMMIES * sizeof(int)) correct way to initialize the a locs, because its shared between function (out of scope)
 
 ## Bugs
 
