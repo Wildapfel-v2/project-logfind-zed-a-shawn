@@ -7,14 +7,27 @@ const char *DUMMY_LOGFIND_PATH = "/var/home/max-inspiron/Workbench/learn-c-the-h
 
 int main(int argc, char *argv[]){
 
+    char *MODE = "and"; // 0 is default for and logic
+
     if (argc == 1) {
         log_err("Missing patterns: /main.c ...");
         exit(1);
     }
 
-    int n_patterns = argc - 1;
-    argv++;                         // just do the pointer trick, just incremnt by the first strings, which is function call
-   
+    // increment argv pointer according to the start of the first pattern argument
+    int n_patterns;
+    if (!strcmp(argv[1], "-o")) {
+        MODE = "or";
+        n_patterns = argc - 2;
+        argv++;
+        argv++;
+    }
+    else {
+        n_patterns = argc - 1;
+        argv++;                         
+    }
+
+    log_info("%s", *argv);
     FILE *fp;
     fp = fopen(DUMMY_LOGFIND_PATH, "r");
     char **lines = readlines(fp);
@@ -25,16 +38,13 @@ int main(int argc, char *argv[]){
         fp_logfind_content = fopen(lines[i], "r");
         char *line;
         int bool_;
-        int dev_c = 0;
-        while (dev_c < 20){
+        
+        while (1){
             line = readline(fp_logfind_content);
-            log_info("%s", line);
             if (line == NULL) break;
-            bool_ = patterns_exists(line, n_patterns, argv, "and");
-            // if (bool_) 
-            log_info("%d", bool_);
-            // break;
-            dev_c++;
+            bool_ = patterns_exists(line, n_patterns, argv, MODE);
+            if (bool_) printf("%s\n", line);
+        
         }
     }
 
