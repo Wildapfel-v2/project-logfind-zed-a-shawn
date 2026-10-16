@@ -1,0 +1,48 @@
+# simple object creation
+$ gcc -c string_utils.c -o string_utils.o
+
+# build executable
+$ gcc string_utils.o main.c -o main
+
+# single argument and logic: and (default)
+$ ./main INFO
+[INFO] (main.c:30) INFO
+2026-01-15 10:00:01 INFO  starting application
+2026-01-15 10:00:04 INFO  retrying connection
+2026-01-15 10:00:05 INFO  connected to database
+2026-01-15 10:00:07 INFO  serving on port 8080
+2026-01-15 10:00:09 INFO  request completed: 200 OK
+INFO  processing 100 records
+INFO  processed 5 of 100
+INFO  done
+2026-01-15 09:55:00 INFO  server boot
+2026-01-15 09:55:01 INFO  listening on 0.0.0.0:443
+2026-01-15 09:56:11 INFO  client connected
+2026-01-15 09:56:13 INFO  client disconnected
+2026-01-15 09:57:00 INFO  client connected
+2026-01-15 09:57:01 INFO  handshake ok
+2026-01-15 09:59:00 INFO  shutdown requested
+
+# two arguments with logic: or (set with identifier)
+$ ./main -o INFO application
+[INFO] (main.c:30) INFO
+2026-01-15 10:00:01 INFO  starting application
+2026-01-15 10:00:04 INFO  retrying connection
+2026-01-15 10:00:05 INFO  connected to database
+2026-01-15 10:00:07 INFO  serving on port 8080
+2026-01-15 10:00:09 INFO  request completed: 200 OK
+INFO  processing 100 records
+INFO  processed 5 of 100
+INFO  done
+2026-01-15 09:55:00 INFO  server boot
+2026-01-15 09:55:01 INFO  listening on 0.0.0.0:443
+2026-01-15 09:56:11 INFO  client connected
+2026-01-15 09:56:13 INFO  client disconnected
+2026-01-15 09:57:00 INFO  client connected
+2026-01-15 09:57:01 INFO  handshake ok
+2026-01-15 09:59:00 INFO  shutdown requested
+
+# two arguments with logic: and
+$ ./main INFO application
+[INFO] (main.c:30) INFO
+2026-01-15 10:00:01 INFO  starting application
