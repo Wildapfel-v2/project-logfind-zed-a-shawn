@@ -1,0 +1,11 @@
+DEBUG opening file: /tmp/fake-input.dat
+DEBUG buffer size: 4096
+INFO  processing 100 records
+DEBUG record 1: ok
+DEBUG record 2: ok
+WARN  record 3: unexpected field
+DEBUG record 4: ok
+ERROR record 5: checksum mismatch
+INFO  processed 5 of 100
+DEBUG flushing buffer
+INFO  done

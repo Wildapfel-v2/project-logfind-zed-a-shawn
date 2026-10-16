@@ -1,0 +1,9 @@
+2026-01-15 10:00:01 INFO  starting application
+2026-01-15 10:00:02 DEBUG loading config from /etc/app/config
+2026-01-15 10:00:03 ERROR failed to connect to database
+2026-01-15 10:00:04 INFO  retrying connection
+2026-01-15 10:00:05 INFO  connected to database
+2026-01-15 10:00:06 WARN  cache is empty
+2026-01-15 10:00:07 INFO  serving on port 8080
+2026-01-15 10:00:08 DEBUG request received: GET /health
+2026-01-15 10:00:09 INFO  request completed: 200 OK

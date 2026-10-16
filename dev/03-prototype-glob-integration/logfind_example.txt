@@ -1,0 +1,1 @@
+/var/home/max-inspiron/Workbench/learn-c-the-hard-way-revisited/v2/exercises/part04-projects/ex26-project-logfind/dev/03-prototype-glob-integration/data-dummies/*
