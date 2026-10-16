@@ -1,3 +1,5 @@
+*quick notes*
+
 ## Comments
 
 **dev/00-archive/prototype-without-glob-functionality-first-apporach**
