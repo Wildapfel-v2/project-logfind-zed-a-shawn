@@ -2,7 +2,7 @@
 
 - This is a project without example code, only an instruction for what suggests to build
 
-- [ ] I will not use AI or google for the implemenation ^.... 
+- [ ] I will not use AI or google for the implemenation ^....
 
 ---
 
@@ -11,9 +11,9 @@
 ***Sketch***
 
 - should allow a mutliple console arguments 
-  
+
   - default behaviour logical AND
-  
+
   - `-o` should switch to logical OR
 
 - if a logfile contains the console arguments (AND/OR) then the file should be printed
@@ -25,15 +25,15 @@
 - Use `glob` with `man 3 glob` 
 
 - ~~If a log file contains the arguments, report that~~
-  
+
   - this is a bit weird in the intro i will do this instead:
-  
+
   - Output the lines that match during scan
 
 ***glob***
 
 - find pathnames matching a pattern
 
-- I only used `man 3 glob` and found the example useful 
+- I only used `man 3 glob` and found the example useful
 
-
+- return all files matching the pattern (incl. directories)
